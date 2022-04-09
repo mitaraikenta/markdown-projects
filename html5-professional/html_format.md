@@ -324,6 +324,11 @@ HTML5からは、セクションを表す4つの新しい要素「article要素�
 
 ![](images/img8.png)
 
+赤文字の部分(<blockquote>～</blockquote>)にも見出しがありますが、これはアウトラインに含まれていません。このblockquote要素のように、要素内の内容が独立したアウトライン(階層構造)となり、外部のアウトラインに影響を与えない要素のことを「セクショニング・ルート」といいます。
+セクショニング・ルートの要素は下記の6つです。
+
+body, blockquote, details, fieldset, figure, td
+
 
 
 
