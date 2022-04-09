@@ -199,6 +199,131 @@ id属性とclass属性のソースと表示例です。
 
 ![](images/img4.png)
 
+### 文字コード
+
+****
+
+文字コードとは文字や記号をコンピュータ上で処理するために割り当てた数値
+
+数値と文字の対応・変換の方式を「エンコーディング(符号化方式)」という
+
+![](images/img5.png)
+
+HTML5では、多言語の文字に対応している文字集合「Unicode」のエンコーディングであるUTF-8の使用が推奨
+
+HTML5では、文書内で使用するエンコーディングをmeta要素のcharset属性によって指定します。charset属性は1つの文書につき1つだけ指定でき、文書の先頭から1024バイト以内に、また、文書のタイトル(title要素)などの日本語よりも前の方に記述
+#### HTML文書の文字エンコーディングが違うと・・・
+
+****
+
+HTML文書の文字エンコーディングとWebページを表示する際の文字エンコーディングが異なると、文字が正しく表示されず文字化けが発生!!
+
+- エンコーディングの指定
+```html
+<head>
+<meta charset="UTF-8">
+<title>文書のタイトル</title>
+...略...
+</head>
+```
+
+meta要素は様々なメタデータ(HTML文書に関する情報)を指定するタグだぞ
+
+
+### 直接書いてはいけない文字
+
+****
+
+はげてる人に「はげた人」だーと言ったらビンタされるように
+
+htmlにも直で使ってはいけないワードがある
+
+- 直で使ってはいけないワード一覧
+
+****
+
+![](images/img6.png)
+
+使用例
+
+<　test　> →　&lt;test&gt;
+
+### コンテンツモデル
+
+****
+
+HTML5から「コンテンツモデル」という概念が加わりました。
+
+
+![](images/img7.png)
+
+#### メタデータ・コンテンツ
+
+****
+
+base, link, meta, script, noscript, style, title
+
+#### フロー・コンテンツ
+
+****
+
+body要素(<body>～</body>)内で記述されるHTML文書のほとんどの要素が属します。
+
+#### セクショニング・コンテンツ
+
+****
+
+文書のセクション(節や章などのまとまった区分)を表す要素が属します。
+
+要素：article, aside, nav, section
+
+#### ヘッディング・コンテンツ
+
+****
+
+セクションの見出しとなる要素が属します。
+
+h1, h2, h3, h4, h5, h6
+
+#### フレージング・コンテンツ
+
+****
+
+テキストの要素が属します。従来の「インライン要素」です。
+
+a, area, audio, b, bdi, br, button, canvas, code, datalist, dfn, em, embed, i, iframe, imge, input, keygen, label, mark, meter, noscript, object, output, progress, q, ruby, s, script, select, small, span, strong, svg, textarea, time, video, wbr, text など
+
+#### エンベッディッド・コンテンツ
+
+****
+
+画像や動画などの外部ファイルを文書に埋め込む要素が属します。
+
+要素:
+audio, canvas, embed, iframe, img, object, svg, video
+
+#### インタラクティブ・コンテンツ
+
+****
+
+ユーザーによる操作に対応する要素が入ってる
+
+インタラクティブ・コンテンツの要素:
+a, audio, button, details, embed, iframe, img, input, keygen, label, object, select, textarea, video など
+
+#### セクションとアウトライン
+
+***
+
+HTML5からは、セクションを表す4つの新しい要素「article要素」「aside要素」「nav要素」「section要素」が追加
+
+
+これらの要素で指定された部分は明示的なセクションとなります。また、見出し要素(h1～h6要素)が現れたらそこから暗黙的なセクションが開始
+
+下図の青い四角のように、HTML文書から明示的なセクション(ここではsection要素)と暗黙的なセクション(h1～h6要素)の見出しだけを抜き出して、階層構造が一目で分かるようにしたものがアウトラインです
+
+![](images/img8.png)
+
 
 
 
