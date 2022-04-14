@@ -329,6 +329,89 @@ HTML5からは、セクションを表す4つの新しい要素「article要素�
 
 body, blockquote, details, fieldset, figure, td
 
+### http-equiv
+
+****
+
+meta要素は様々なメタデータ(HTML文書に関する情報)を指定するのーね
+。文書内で使用する文字エンコーディング(符号化方式: 文字をコンピュータ上で処理するために数値を割り当てる方式)の指定や検索エンジン対策に使用するのーね
+![](images/img9.jpg)
+
+ク...クロノス先生！！
+
+クロノス：meta要素はタグで囲う要素内容が無い空要素ナノーネ
+
+クロノス：大体はhead要素(文書のヘッダ部分)の中に記述するから気をつけるノーね
+
+クロノス：ここに表を載せとくのね
+
+![](images/img11.png)
+
+クロノス：http-equiv属性とname属性は融合！！content属性と一緒にするのーネ
+
+#### meta要素の使用例
+
+****
+
+- エンコーディングの指定
+
+HTML5からmeta要素にcharset属性が加わり、短い記述でエンコーディングが指定できるようになりました。
+HTML4以前ではhttp-equiv属性で指定
+
+#### HTML5の記述方法
+
+****
+
+<meta charset="utf-8">
+
+#### HTML4以前の記述方法
+
+****
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+#### 文書の著者の指定
+
+****
+
+<meta name="author" content="HTML5 太郎">
+
+#### 検索エンジン用の説明の指定
+
+****
+
+<meta name="description" content="CCNA/CCNP、LPIC、ITパスポート、オラクルマスター、ITILの試験合格を目指す人を応援する学習サイト">
+
+おー。これで検索結果などに表示される文書の説明
+
+#### 文書の内容に関するキーワードの指定
+
+****
+「,」(半角カンマ)で区切って複数のキーワードを指定
+
+<meta name="keywords" content="HTML5プロフェッショナル認定試験, レベル1, 問題集">
+
+#### プラグマ指示子として指定
+
+****
+
+プラグマ指示子(プラグマディレクティブ)とは
+、文書の状態や挙動をブラウザに指示する命令のこと
+
+meta要素にhttp-equiv属性を指定すると、meta要素はプラグマ指示子になります
 
 
+Content-Type: ファイルタイプやエンコーディングの指定
 
+Cache-Control(またはpragma): ブラウザのキャッシュの制御
+refresh: 別ページへのリダイレクト(自動的に転送されること)や再読み込みの指定
+
+次の例では文書をキャッシュさせないようにします。
+<meta http-equiv="Cache-Control" content="no-cache">
+
+次の例では5秒ごとに現在のWebページを再読み込み(リフレッシュ)します。
+<meta http-equiv="refresh" content="5">
+
+
+次の例では、20秒後に「new.html」ページへ移動します。
+<meta http-equiv="refresh" content="20; URL=new.html">
